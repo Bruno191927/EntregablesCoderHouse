@@ -36,33 +36,33 @@ class Usuario{
     }
 }
 
-const user1 = new Usuario('Luis','Aguirre',[{nombre:'Design Pattern',autor:'Erich Gamma'}],['Perro']);
+const usuario = new Usuario('Luis','Aguirre',[{nombre:'Design Pattern',autor:'Erich Gamma'}],['Perro']);
 
 
 //Metodo getFullName
 console.log('Nombre Completo:');
-console.log(user1.getFullName());
+console.log(usuario.getFullName());
 
 console.log('-------------');
 
 //Metodo countMascotas
 console.log('Numero de mascotas:');
-console.log(user1.countMascotas());
+console.log(usuario.countMascotas());
 
 //Metodo addMascota
-user1.addMascota('Gato');
+usuario.addMascota('Gato');
 console.log('Numero de mascotas:');
-console.log(user1.countMascotas());
+console.log(usuario.countMascotas());
 
 console.log('-------------');
 
 //MetodogetBookNames
 console.log('Nombre de Libros:');
-console.log(user1.getBookNames());
+console.log(usuario.getBookNames());
 
 //Metodo addBook
-user1.addBook('Clean Code','Robert C. Martin');
-console.log(user1.getBookNames());
+usuario.addBook('Clean Code','Robert C. Martin');
+console.log(usuario.getBookNames());
 
 
 
