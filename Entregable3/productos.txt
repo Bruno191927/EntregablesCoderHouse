@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Guarana",
+    "price": 10,
+    "thumbnail": "https://presto.com.pe/wp-content/uploads/2021/08/gaseosas.jpg",
+    "id": 1
+  },
+  {
+    "title": "CocaCola",
+    "price": 10,
+    "thumbnail": "https://presto.com.pe/wp-content/uploads/2021/08/gaseosas.jpg",
+    "id": 2
+  },
+  {
+    "title": "Pepsi",
+    "price": 10,
+    "thumbnail": "https://presto.com.pe/wp-content/uploads/2021/08/gaseosas.jpg",
+    "id": 3
+  }
+]
