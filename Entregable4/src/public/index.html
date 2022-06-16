@@ -8,15 +8,32 @@
     <title>Crear Producto</title>
 </head>
 <body>
-    <form action="/api/productos"  method="POST" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-        <div class="grid grid-cols-4">
-            <h3 style="margin-bottom: 2rem;"> Nuevo Producto:</h3>
+    <div class="h-screen flex flex-row justify-center bg-green-200">
+        <div class="basis-1/2 p-20">
+            <form action="/api/productos" method="POST" class="bg-white shadow-md rounded-xl">
+                <div class="flex flex-row flex-wrap p-10">
+                    <div class="basis-full">
+                        <h1 class="text-green-500 text-5xl font-black text-center">Nuevo Producto</h1>
+                    </div>
+                    <div class="basis-full">
+                        <label for="title" class="block text-green-500 font-bold mb-1 md:mb-0 pr-4">Título:</label>
+                        <input type="text" name="title" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-green-500">
+                    </div>
+                    <div class="basis-full">
+                        <label for="title" class="block text-green-500 font-bold mb-1 md:mb-0 pr-4">Precio:</label>
+                        <input type="number" name="price" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-green-500">
+                    </div>
+                    <div class="basis-full">
+                        <label for="title" class="block text-green-500 font-bold mb-1 md:mb-0 pr-4">Url Link:</label>
+                        <input type="text" name="thumbnail" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-green-500">
+                    </div>
+                    <div class="basis-full flex flex-row justify-center">
+                        <input type="submit" value="Agregar" style="margin-top: 2rem;" class="hadow bg-green-500 hover:bg-green-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded">
+                    </div>
+                </div>
+                <!-- <input type="submit" value="elimminar" name="delete" style="margin-top: 2rem;"> -->
+            </form>
         </div>
-        Título: <input type="text" name="title">
-        Precio: <input type="number" name="price">
-        Enlace Foto: <input type="text" name="thumbnail"><br>
-        <input type="submit" value="subir" style="margin-top: 2rem;">
-        <!-- <input type="submit" value="elimminar" name="delete" style="margin-top: 2rem;"> -->
-    </form>
+    </div>
 </body>
 </html>
