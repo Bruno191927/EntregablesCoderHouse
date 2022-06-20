@@ -1,0 +1,23 @@
+extends ../layout/index
+
+block contenido
+    h2(class = "text-center text-3xl uppercase font-serif") #{nombre}
+    div(class="py-6")
+            if data.length === 0
+                div(class="flex items-center justify-center")
+                    p(class="text-grey-500 text-xl") No tienes productos creados. 
+                        a(href="/producto", class="text-blue-500 text-xl") Crear Productos
+            else
+                div(class="flex items-center justify-center")
+                    p(class="text-grey-500 text-xl") Deseas crear mas productos? 
+                        a(href="/producto", class="text-blue-500 text-xl") Crear Productos
+                div(class="py-4")
+                div(class="flex flex-wrap justify-between")
+                    each product in data
+                        div(class="max-w-sm rounded overflow-hidden shadow-lg mb-5")
+                            img(src=`${product.thumbnail}`, alt="img", class="w-72 h-36")
+                            div(class="px-4 py-4")
+                                div(class="font-bold text-xl mb-2") #{product.title}
+                                    p(class="text-gray-700 text-base") Precio: 
+                                        span(class="text-gray-600 text-base") #{product.price}
+                

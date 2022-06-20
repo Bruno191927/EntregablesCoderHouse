@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gray-50">
+    <main class="mx-auto container mt-10 px-2">
+        <h2 class="text-center text-3xl uppercase font-serif"><%= nombre%></h2>
+        <div class="py-6">
+            <% if(data.length > 0){ %>
+                <div class="flex items-center justify-center">
+                    <p class="text-grey-500 text-xl font-serif">Deseas crear mas productos? <a href="/producto" class="text-blue-500 text-xl font-serif">Crear Productos</a></p>
+                </div>
+                <div class="py-4"></div>
+                <div class="flex flex-wrap justify-between">
+                    <% data.forEach(p => { %>
+                        <div class="max-w-sm rounded overflow-hidden shadow-lg mb-5">
+                            <img src="<%= p.thumbnail %>" alt="" class="w-72 h-36">
+                            <div class="px-4 py-4">
+                                <div class="font-bold text-xl mb-2">
+                                    <%= p.title %>
+                                    <p class="text-gray-700 text-base">
+                                        Precio:
+                                        <span class="text-gray-600 text-base"><%= p.price %></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    <% }) %>
+                </div>
+            <%}else{%>
+                <div class="flex items-center justify-center">
+                    <p class="text-grey-500 text-xl font-serif">Deseas crear mas productos? <a href="/producto" class="text-blue-500 text-xl font-serif">Crear Productos</a></p>
+                </div>
+            <%}%>
+        </div>
+    </main>
+</body>
+</html>

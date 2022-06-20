@@ -1,0 +1,31 @@
+<div>
+    <h2 class="text-center text-3xl uppercase font-serif">{{nombre}}</h2>
+    <div class="py-10">
+        <div class="flex items-center justify-center">
+            <p class="text-grey-500 text-xl"> Deseas ver tus productos? 
+                <a href="/" class="text-blue-500 text-xl">Ver mis productos</a>
+            </p>
+        </div>
+        <div class="mt-8 mx-auto max-w-md">
+            <div class="bg-white py-8 px-4 shadow">
+                <form action="/producto" method="post" class="space-y-5">
+                    <div>
+                        <label for="title" class="block text-gray-700 text-sm font-bold mb-2">Nombre del Producto</label>
+                        <input type="text" name="title" placeholder="Ingresa un nombre" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    </div>
+                    <div>
+                        <label for="price" class="block text-gray-700 text-sm font-bold mb-2">Precio</label>
+                        <input type="text" name="price" placeholder="Ingresa un precio" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    </div>
+                    <div>
+                        <label for="thumbnail" class="block text-gray-700 text-sm font-bold mb-2">Thumbnail</label>
+                        <input type="text" name="thumbnail" placeholder="Ingresa una url" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <input type="submit" value="Crear Producto" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
