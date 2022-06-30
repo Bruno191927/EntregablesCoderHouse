@@ -2,7 +2,7 @@ const express = require('express')
 const app = express();
 const http = require('http');
 const path = require('path');
-const port = process.env.PORT || '3000';
+const port = process.env.PORT || '8080';
 app.set('port', port);
 const chatPath = path.resolve( __dirname, 'public/chat');
 const storePath = path.resolve(__dirname,'public/store');
