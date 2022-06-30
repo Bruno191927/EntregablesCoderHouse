@@ -1,25 +1,39 @@
 let socket = io();
-
-const form = document.querySelector('#form-product');
-const titleInput = document.querySelector('#title');
-const priceInput = document.querySelector('#price');
-const thumbnailInput = document.querySelector('#thumbnail');
-
-form.addEventListener('submit', event => {
-    event.preventDefault();
-    sendProduct();
-});
+const form = document.getElementById('form-product');
+const title = document.getElementById('title');
+const price = document.getElementById('price');
+const thumbnail = document.getElementById('thumbnail');
+const successModal = document.querySelector('.exito');
+const errorModal = document.querySelector('.error');
+form.addEventListener('submit',sendProduct);
 
 
-function sendProduct() {
-    console.log('Ingreso')
+async function sendProduct(event) {
     try {
-        const title = titleInput.value
-        const price = priceInput.value
-        const thumbnail = thumbnailInput.value
-    
-        console.log('Entregado');
+        const titleData = title.value;
+        const priceData = price.value;
+        const thumbnailData = thumbnail.value;
+
+        if([titleData,priceData,thumbnailData].includes('')){
+            errorModal.classList.remove('hidden');
+            setTimeout(() => {
+                errorModal.classList.add('hidden');
+            }, 2000);
+        }else{
+            let data = {
+                title:titleData,
+                price:priceData,
+                thumbnail:thumbnailData
+            }
+
+            socket.emit('insertProduct',data);
+            successModal.classList.remove('hidden');
+            setTimeout(() => {
+                successModal.classList.add('hidden')
+            }, 2000);
+        }
     } catch(error) {
         console.log(error);
     }
+    event.preventDefault();
 }

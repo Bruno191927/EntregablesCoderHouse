@@ -23,6 +23,7 @@ exports.insertMessageInChat = async(data) => {
                 const chatData = await this.readChat();
                 data.createdAt = Utils.convertDate();
                 chatData.push(data);
+                await fs.promises.writeFile('chat.txt', JSON.stringify(chatData, null, 2));
                 return resolve(true);
             } catch (error) {
                 return reject(error);

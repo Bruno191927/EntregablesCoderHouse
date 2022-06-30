@@ -1,0 +1,12 @@
+[
+  {
+    "email": "anonimo1@gmail.com",
+    "message": "Hola",
+    "createdAt": "30-6-2022 3:55:8"
+  },
+  {
+    "email": "anonimo2@gmail.com",
+    "message": "Hola",
+    "createdAt": "30-6-2022 4:0:6"
+  }
+]

@@ -21,10 +21,10 @@ exports.insertProduct = async(data) => {
             try {
                 const productData = await this.readProducts();
                 productData.push(data);
-                fs.promises.writeFile('store.txt', JSON.stringify(productData, null, 2));
+                await fs.promises.writeFile('store.txt', JSON.stringify(productData, null, 2));
                 return resolve(true);
             } catch (error) {
-                return reject(error);
+                return reject(false);
             }
         }
     );

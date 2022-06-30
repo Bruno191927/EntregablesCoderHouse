@@ -14,10 +14,18 @@
             <div class="flex items-center justify-center">
                 <a href="/form-store" class="text-blue-500 text-xl font-serif">Crear Productos</a></p>
             </div>
-            <div id="products">
+            <div class="flex items-center justify-center">
+                <p class="text-grey-500 text-xl"> Necesitas Hablar con Alguien? 
+                    <a href="/chat" class="text-blue-500 text-xl">Sala de chat</a>
+                </p>
+            </div>
+            <div class="flex flex-wrap space-x-5" id="products">
 
             </div>
         </div>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script> 
 </body>
 </html>
