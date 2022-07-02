@@ -1,3 +1,17 @@
 [
-  
+  {
+    "title": "Computadora1",
+    "price": "80",
+    "thumbnail": "https://www.metroworldnews.com/resizer/xA0ZVQMcsER5VPoJd_tjZjRzCm8=/800x0/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/metroworldnews/USWSS4RSLVCYXEG6ASP4EM5YRU.jpg"
+  },
+  {
+    "title": "Computadora2",
+    "price": "50000",
+    "thumbnail": "https://servisistemas.com.co/informatica-y-tecnologia/img/cms/0001/banne_categoria_apple.png"
+  },
+  {
+    "title": "Computadora3",
+    "price": "5454545",
+    "thumbnail": "https://i.ytimg.com/vi/aMx1kStx6QQ/maxresdefault.jpg"
+  }
 ]
