@@ -1,7 +1,5 @@
 export const verifyRol = (request,response,next) => {
     let isAdmin = request.get('admin');
-    //console.log(request.method);
-    //console.log(request.baseUrl);
     let pathUrl = request.originalUrl;
     let method = request.method;
     if(isAdmin){
