@@ -1,0 +1,11 @@
+import {createShoppinCartController,findShoppingCartsController,findShoppingCartByIdController,deleteShoppingCartController,deleteShoppingCartProductController,insertProductInCartProductController} from './controller.js';
+import express from 'express';
+import { verifyRol } from '../../middleware/verify_rol.js';
+const router = express.Router();
+router.post('/',createShoppinCartController);
+router.post('/:id/productos',insertProductInCartProductController);
+router.get('/',findShoppingCartsController);
+router.get('/:id/productos',findShoppingCartByIdController);
+router.delete('/:id',deleteShoppingCartController);
+router.delete('/:id/productos/:id_prod',deleteShoppingCartProductController);
+export default router;
