@@ -1,0 +1,20 @@
+{
+  "name": "entregable8",
+  "version": "1.0.0",
+  "description": "Coneccion con Knex | SQLite | MySql",
+  "main": "APP.JS",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Luis Bruno Aguirre P",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "knex": "^2.1.0",
+    "mysql2": "^2.3.3",
+    "socket.io": "^4.5.1",
+    "sqlite3": "^5.0.8"
+  }
+}
