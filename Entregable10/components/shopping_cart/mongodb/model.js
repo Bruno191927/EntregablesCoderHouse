@@ -8,10 +8,8 @@ const shoppingCartsSchema = new mongoose.Schema({
     },
     productos:[
         {
-            product:{
-                type:Schema.Types.ObjectId,
-                ref:'Product'
-            }
+            type:Schema.Types.ObjectId,
+            ref:'Product'
         }
     ]
 });

@@ -7,7 +7,7 @@ class ShoppingMongoContainer{
         try {
             const newShoppingCart = await model.create({
                 productos:data.productos
-            },{new:true});
+            });
             return newShoppingCart;
         } catch (error) {
             console.log(error);
@@ -31,7 +31,9 @@ class ShoppingMongoContainer{
 
     async getAll(){
         try {
-            const listShoppingCart = await model.find();
+            const listShoppingCart = await model
+            .find()
+            .populate({path:'productos',select:'timestamp nombre descripcion codigo foto precio stock'});
             return listShoppingCart;
         } catch (error) {
             console.log(error);
@@ -43,7 +45,7 @@ class ShoppingMongoContainer{
         try {
             const shoppinCart = await model
             .findById(id)
-            .populate({path:'productos',select:'timestamp,nombre,descripcion: data.descripcion,codigo,foto,precio,stock'});
+            .populate({path:'productos',select:'timestamp nombre descripcion codigo foto precio stock'});
             return shoppinCart;
         } catch (error) {
             console.log(error);
@@ -67,9 +69,7 @@ class ShoppingMongoContainer{
         try {
             let insertProducts = await model.findByIdAndUpdate(id,{
                 $pull:{
-                    productos:{
-                        _id:productId
-                    }
+                    productos:productId
                 }
             });
             return insertProducts;
