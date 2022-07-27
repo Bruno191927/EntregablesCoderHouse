@@ -1,4 +1,3 @@
-import {createProduct,findProducts,findProductById,updateProduct,deleteProductById} from './archivo/dao.js';
 import { productDto,productList } from './dto.js';
 import dao from './dao.js';
 export const createProductController = async(request,response) => {
