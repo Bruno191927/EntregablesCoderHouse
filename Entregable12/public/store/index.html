@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-screen bg-gray-50">
+    <main class="mx-auto container mt-8 px-2">
+        <h2 class="text-center text-2xl uppercase font-serif">Productos</h2>
+        <div class="py-4">
+            <div class="flex items-center justify-center">
+                <p class="text-grey-500 text-xl"> Necesitas Hablar con Alguien? 
+                    <a href="/chat" class="text-blue-500 text-xl">Sala de chat</a>
+                </p>
+            </div>
+            <div class="flex flex-wrap mt-5 h-[20rem] overflow-auto" id="products">
+
+            </div>
+        </div>
+        <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative error mx-10 hidden" role="alert">
+            <strong class="font-bold">Error!</strong>
+            <span class="block sm:inline">Los campos no pueden estar vacios.</span>
+        </div>
+        <div class="mt-8 mx-auto w-3/4 my-5">
+            <div class="bg-white py-8 px-4 shadow">
+                <form id="form-product" class="space-y-5">
+                    <div>
+                        <h2 class="text-center text-2xl uppercase font-serif">Crear Productos</h2>
+                    </div>
+                    <div class="flex justify-between">
+                        <div class="w-2/5">
+                            <label for="title" class="block text-gray-700 text-sm font-bold mb-2">Nombre del Producto</label>
+                            <input type="text" id="title" name="title" placeholder="Ingresa un nombre" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        </div>
+                        <div class="w-2/5">
+                            <label for="price" class="block text-gray-700 text-sm font-bold mb-2">Precio</label>
+                            <input type="text" id="price" name="price" placeholder="Ingresa un precio" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="thumbnail" class="block text-gray-700 text-sm font-bold mb-2">Thumbnail</label>
+                        <input type="text" id="thumbnail" name="thumbnail" placeholder="Ingresa una url" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <input type="submit" value="Crear Producto" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative exito mx-10 hidden" role="alert">
+        <strong class="font-bold">Aceptado!</strong>
+        <span class="block sm:inline">El producto se creo con exito.</span>
+    </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script> 
+</body>
+</html>
